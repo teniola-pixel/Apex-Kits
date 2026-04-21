@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Kits</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* NAVBAR */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav img {
+    width: 90px;
+}
+
+.nav .brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 15px 35px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff3e3e;
+    color: white;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    padding: 15px;
+}
+
+/* CONTACT */
+.contact a {
+    color: #ff3e3e;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
+   
+    <div>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Apex Kits</h1>
+        <p>Custom jerseys built for the top.</p>
+        <a href="https://wa.me/2349138410651" class="btn">Order Now</a>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="shop">
+    <h2>Featured Jerseys</h2>
+
+    <div class="products">
+        <div class="card">
+            <img src="jersey1.jpg">
+            <p>Black & Gold Elite</p>
+        </div>
+
+        <div class="card">
+            <img src="jersey2.jpg">
+            <p>Red Strike Kit</p>
+        </div>
+
+        <div class="card">
+            <img src="hero.jpg">
+            <p>Midnight Blue Pro</p>
+        </div>
+
+        <div class="card">
+            <img src="jersey4.jpg">
+            <p>White Legacy Edition</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <h2>Contact Apex Kits</h2>
+    <p>Order via WhatsApp:</p>
+    <a href="https://wa.me/2349138410651">09138410651</a>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Apex Kits
+</div>
+
+</body>
+</html>
